@@ -4,46 +4,42 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 2em;
     font-size: 25px;
-    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#nome {
+    width: 100%;
+}
+
+#apresentação {
+    display: inline-block;
+    position: relative;
+}
+
+#back {
+    width: 100%;
 }
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#descrição {
-    font-style: italic;
+#texto {
+    position: absolute;
+    top: 145px;
+    right: 20px;
+    font-size: 40px;
+    text-shadow: 0px 0px 5px black;
+    font-size: 30px;
+    color: black;
+    padding-left: 70%;
+    margin-right: 10%;
 }
 
 .principal {
     font-family: fantasy;
     font-size: inherit;
-}
-
-#foto {
-    border-radius: 150px;
-    transform: rotate(-14deg);
-    box-shadow: #aaa
-}
-
-#nome {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 65px;
-}
-
-#doug {
-    font-family: 'Gorditas', cursive;
-    width: 100%;
-    height: auto;
-    float: left;
-    text-align: center;
-    color: black;
-    font-weight: 700;
-    font-size: 70px;
-    background-image: url(fundonome.jpg);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 4px 4px 4px #aaa;
 }
 
 #menu {
@@ -67,4 +63,18 @@ h1 {
     font-size: 25px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: initial;
+}
+
+#reflexão {
+    padding-top: 15%;
+    position: relative;
+    font-family: cursive, sans-serif;
+    font-weight: 100;
+    padding-left: 5%;
+}
+
+#gif {
+    width: 40%;
+    border-radius: 100px;
+    float: right;
 }
