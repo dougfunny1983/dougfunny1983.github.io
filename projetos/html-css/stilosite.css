@@ -1,0 +1,97 @@
+body {
+    background-color: aquamarine;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: 2em;
+}
+
+.titulo {
+    position: relative;
+    width: 100%;
+    margin-top: 0px;
+    padding: 60px 30px 40px;
+    align-items: center;
+    background-color: #fff;
+    background-image: url(fotos/bh-capa.jpg);
+    background-position: 50% 25%;
+    background-size: cover;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+}
+
+#titulo {
+    font-size: 150px;
+    color: #D6D6D6;
+    text-align: center;
+    font-family: URW Chancery L, cursive, sans-serif;
+    text-shadow: #000 20px 30px 7px;
+}
+
+#menu ul {
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(132, 130, 136);
+    list-style: none;
+    font-size: 20px;
+}
+
+#menu ul li {
+    display: initial;
+    text-align: center;
+}
+
+#menu ul li a {
+    padding: 2px 40px;
+    display: inline-block;
+    background-color: rgb(1, 2, 1);
+    color: rgb(255, 253, 253);
+    text-decoration: green;
+    border-bottom: 3px solid #EDEDED;
+    margin-left: 10%;
+}
+
+#menu ul li a:hover {
+    background-color: #D6D6D6;
+    color: #6D6D6D;
+    border-bottom: 10px solid #EA0000;
+}
+
+.imagemantiga {
+    width: 300px;
+    float: left;
+    margin-right: 2%;
+}
+
+.texto {
+    margin-top: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    margin-bottom: 2%;
+}
+
+footer {
+    position: relative;
+    background-color: red;
+    width: 100%;
+    height: 48px;
+    left: 0;
+    bottom: 0;
+    text-align: center
+}
+
+.bh {
+    height: 300px;
+    width: 300px;
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 0.0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bh img {
+    width: 80%;
+}
