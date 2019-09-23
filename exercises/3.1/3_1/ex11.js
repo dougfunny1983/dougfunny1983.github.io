@@ -1,0 +1,1 @@
+//11- Um trabalhador de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcula o líquido a ser recebido pelo trabalhador.
