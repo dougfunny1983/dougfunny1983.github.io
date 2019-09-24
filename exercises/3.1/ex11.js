@@ -5,6 +5,9 @@ INSS[8, 9, 11, 570.88]
 let IR = new Array
 IR[7.5, 15, 22.5, 27.5, 869.36]
 salario_bruto = 4514.56
+
+//Calculo de INSS
+
 if (salario_bruto <= 1556.94) {
     salario_liquido = salario_bruto - (salario_bruto * INSS[0] / 100)
 } else if (salario_bruto > 1556.94 && salario_bruto <= 2594.92) {
@@ -23,7 +26,8 @@ if (salario_liquido <= 1903.98) {
     salario_final = (salario_liquido - (salario_liquido * IR[1] / 100)) - 354.80
 } else if (salario_final > 3751.06 && salario_final <= 4664.68) {
     salario_final = (salario_liquido - (salario_liquido * IR[2] / 100)) - 636.13
-} else if (salario_final >= 4664.68) {
-    salario_final = (salario_liquido - (salario_liquido * IR[3] / 100)) - 869.36
+} else {
+    salario_final = (salario_liquido - (salario_liquido * IR[3] / 100)) - IR[4]
 }
+
 console.log(salario_final)
