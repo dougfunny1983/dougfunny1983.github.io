@@ -59,7 +59,62 @@
 
 <body>
     <script>
-        // COLOQUE SEU CÓDIGO AQUI
+        //ex1
+        var ex1 = document.createElement('h1')
+        ex1.innerHTML = "Exercício 3.4 - JavaScript DOM"
+        document.body.appendChild(ex1)
+            //ex2
+        var ex2 = document.createElement('div')
+        ex2.setAttribute("class", "main-content")
+        document.body.appendChild(ex2)
+            //ex3
+        var ex3 = document.createElement('div')
+        ex3.setAttribute("class", "center-content")
+        document.querySelector('.main-content').appendChild(ex3)
+            //ex4
+        var ex4 = document.createElement('p')
+        ex4.innerHTML = "Colocando um texto qualquer em um p"
+        document.querySelector('.center-content').appendChild(ex4)
+            //ex5
+        var ex5 = document.createElement('div')
+        ex5.setAttribute("class", "left-content")
+        document.querySelector('.main-content').appendChild(ex5)
+            //ex6
+        var ex6 = document.createElement('div')
+        ex6.setAttribute("class", "right-content")
+        document.querySelector('.main-content').appendChild(ex6)
+            //ex7
+        var ex7 = document.createElement('img');
+        ex7.src = "https://picsum.photos/200";
+        ex7.className = "small-image";
+        document.querySelector(".left-content").appendChild(ex7)
+            //ex8
+        var ex8 = document.createElement('ul');
+        ex8.id = "lista1";
+        document.querySelector(".right-content").appendChild(ex8)
+
+        function addItem(item) {
+            var listItem = document.createElement('li');
+            listItem.innerHTML = item;
+            document.getElementById("lista1").appendChild(listItem)
+        };
+
+        addItem("um");
+        addItem("dois");
+        addItem("tres");
+        addItem("quatro");
+        addItem("cinco");
+        addItem("seis");
+        addItem("sete");
+        addItem("oito");
+        addItem("nove");
+        addItem("dez");
+        //ex9
+        for (let index = 0; index < 3; index++) {
+            var ex9 = document.createElement('h3');
+            document.querySelector('.main-content').appendChild(ex9);
+
+        }
     </script>
 </body>
 
