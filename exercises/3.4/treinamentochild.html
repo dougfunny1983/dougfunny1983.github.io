@@ -62,6 +62,7 @@
         //ex1
         var ex1 = document.createElement('h1')
         ex1.innerHTML = "Exercício 3.4 - JavaScript DOM"
+        ex1.setAttribute("class", "title")
         document.body.appendChild(ex1)
             //ex2
         var ex2 = document.createElement('div')
@@ -71,6 +72,7 @@
         var ex3 = document.createElement('div')
         ex3.setAttribute("class", "center-content")
         document.querySelector('.main-content').appendChild(ex3)
+        divCenter.style.backgroundColor = "#11A36A"
             //ex4
         var ex4 = document.createElement('p')
         ex4.innerHTML = "Colocando um texto qualquer em um p"
@@ -79,24 +81,27 @@
         var ex5 = document.createElement('div')
         ex5.setAttribute("class", "left-content")
         document.querySelector('.main-content').appendChild(ex5)
+        ex5.removeChild()
             //ex6
         var ex6 = document.createElement('div')
         ex6.setAttribute("class", "right-content")
         document.querySelector('.main-content').appendChild(ex6)
-            //ex7
+        divRight.style.marginRight = "auto";
+        //ex7
         var ex7 = document.createElement('img');
         ex7.src = "https://picsum.photos/200";
         ex7.className = "small-image";
         document.querySelector(".left-content").appendChild(ex7)
             //ex8
         var ex8 = document.createElement('ul');
-        ex8.id = "lista1";
+        ex8.id = "lista";
         document.querySelector(".right-content").appendChild(ex8)
 
         function addItem(item) {
             var listItem = document.createElement('li');
             listItem.innerHTML = item;
-            document.getElementById("lista1").appendChild(listItem)
+            document.getElementById("lista").appendChild(listItem)
+
         };
 
         addItem("um");
@@ -109,10 +114,20 @@
         addItem("oito");
         addItem("nove");
         addItem("dez");
+
+        let i = 0;
+        while (i < 2) {
+            var retirarfilho = documento.getElementById(" lista ").lastChild;
+            documento.getElementById(" lista ").removeChild(retirarfilho);
+            i++;
+        };
+
+
         //ex9
         for (let index = 0; index < 3; index++) {
             var ex9 = document.createElement('h3');
             document.querySelector('.main-content').appendChild(ex9);
+            ex9.setAttribute("class", "description")
 
         }
     </script>
