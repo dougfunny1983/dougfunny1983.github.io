@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div id="quadrado" style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+        Mouse Over Me</div>
+
+    <script>
+        let movimento = document.getElementById("quadrado")
+        movimento.addEventListener("mouseover", function() {
+            movimento.innerHTML = 'Thank you!'
+            movimento.style.backgroundColor = "green"
+
+        })
+        movimento.addEventListener("mouseleave", function() {
+            movimento.innerHTML = 'Mouse Over Me'
+            movimento.style.backgroundColor = "#D94A38"
+        })
+    </script>
+
+</body>
+
+</html>
