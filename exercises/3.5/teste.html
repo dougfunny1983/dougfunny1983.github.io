@@ -1,24 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!-- saved from url=(0076)http://nptcstudents.co.uk/andrewg/jsweb/JavaScriptEventHandlersExercise.html -->
-<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<html>
+<head>
 <title>JavaScript event handlers exercise</title>
 <!-- load css from jsweb -->
-<link rel="stylesheet" type="text/css" href="./ex2.1_files/reset.css">    
-<link rel="stylesheet" type="text/css" href="./ex2.1_files/jsweb.css">
-<style>
-#foto1{
-    background-image: url("https://wallpaperbro.com/img/35107.jpg");
-    width: 960px;
-    height: 540px;
-}
-#foto2{
-    background-image: url("https://wallpaperbro.com/img/35107.jpg");
-    width: 960px;
-    height: 540px;
-}
-
-
-</style>
+<link rel="stylesheet" type="text/css" href="http://nptcstudents.co.uk/andrewg/jsweb/css/reset.css"/>    
+<link rel="stylesheet" type="text/css" href="http://nptcstudents.co.uk/andrewg/jsweb/css/jsweb.css"/>
+<!-- JavaScript could go up here -->
+<!-- JavaScript could go up here -->   
+<!-- JavaScript could go up here -->    
+        
+</head>
+<body>
 
 <script language="javascript" type="text/javascript">
     window.onload = function(){
@@ -32,7 +24,6 @@
 
 <link type="text/css" rel="stylesheet" charset="UTF-8" href="./ex2.1_files/translateelement.css"></head>
 
-<body>
 <div id="excontainer">
 <div id="pagecontent">
     <h1>Event handlers exercise</h1>
@@ -62,7 +53,6 @@
     function minhaFunção() {
         let valor = gamePrice * discount
         let result = parseFloat(valor.toFixed(2))
-
     demo2.innerHTML = alert("£ " +(result)+" off!")
 }
 
@@ -86,18 +76,20 @@
     </ol> 
 <br><br>
 
-<div id="foto1"></div>
+<img id="foto" src="fotos/bebegroot2.jpg" alt="bebe groot" style="width: 960px; height: 540;">
 <script>
-    let foto1 = document.querySelector("#foto1")
-    let foto2 = document.querySelector("#foto1")
-
-    foto1.addEventListener("mouseover", function(){
-        foto1.innerHTML = foto2.innerHTML
-        
-    })
-
-
-
+    let movimento = document.getElementById("foto")
+        movimento.addEventListener("mouseover", function() {
+            movimento.style.backgroundImage = "fotos/bebegroot2.jpg;"
+            movimento.style.width = "960px;"
+            movimento.style.height = "540px;"
+            
+        })
+        movimento.addEventListener("mouseleave", function() {
+            movimento.style.backgroundImage = "fotos/bebegroot2.jpg;"
+            movimento.style.width = "960px;"
+            movimento.style.height = "540px;"
+        })
 </script>
 
 
