@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>Click the button to display the date.</p>
+    <p id="data">22/04/1900</p>
+
+    <button onclick="displayDate()">The time is?</button>
+    <p id="resultado"></p>
+
+
+    <script>
+        function compareDates(date) {
+            let parts = date.split('/')
+            let today = new Date()
+            date = new Date(parts[2], parts[1] - 1, parts[0])
+            var resul = date >= today ? true : false
+            return resul
+        }
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date()
+            var data = document.getElementById('data').innerText
+            var comparar = compareDates(data)
+            if (comparar == true) {
+                document.getElementById("resultado").innerHTML = 'Estou no futuro!'
+            } else {
+                document.getElementById("resultado").innerHTML = 'Estou no passado!'
+            }
+        }
+    </script>
+    <p id="demo"></p>
+
+</body>
+
+</html>
