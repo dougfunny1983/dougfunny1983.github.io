@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p>The onkeyup event occurs when the a keyboard key is on its way UP.</p>
+<p>Enter your name:</p>
+<input type="text" id="myInput" >
+<input type="text" id="mySecondInput" >
+<script>
+function up(x) {
+    let ret = x.toUpperCase()
+    return ret
+}
+let text1 = document.getElementById("myInput")
+let text2 = document.getElementById("mySecondInput")
+text1.addEventListener("keyup", function () {
+    let maior = up(this.value)    
+    text2.value = maior
+})
+</script>
+</body>
+</html>

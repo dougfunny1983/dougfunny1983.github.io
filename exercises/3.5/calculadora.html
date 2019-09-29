@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+<style>
+  .cor{
+      text-align: center;
+      color: #000;
+      font-weight: bold;
+      font-size: 30px;
+      width: 100%;
+      background-color: #0f0;
+  }
+
+</style>
+</head>
+<body>
+
+  <label>Square this number:
+    <input type="number" id="square_input" size="2">
+  </label>
+  <button id="square_button">Calculate</button>
+  <br><br>
+  
+  <label>Half this number:
+    <input type="number" id="half_input" size="2">
+  </label>
+  <button id="half_button">Calculate</button>
+  <br><br>
+  
+  <label>
+    Fraction:
+    <input type="number" id="percent1_input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2_input" size="2">
+  </label>
+  <button id="percent_button">Calculate</button>
+  <br><br>
+  
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area_button">Calculate</button> 
+  <br><br>
+  <div id="solution" class="cor"></div>
+  <br>
+
+  <label>Digite para saber um valor bem "crazy":
+      <input type="number" id="crazy" size="2">
+    </label>
+  <button id = "botaofunçao5">clique aqui!!!</button>
+  <br><br>
+  <div id="resposta" class="cor"></div>
+<script>
+//calculadora
+
+  //função 1
+function squareNumber(arg1) {
+    let square = Math.pow(arg1,2)
+    let answer = "\nO resultado do quadrado do número "+arg1+" é "+square+".\n"
+    return answer
+}
+//funçao 2
+function halfNumber(arg1) {
+    let half = arg1/2
+    let answer = "\nMetade de "+arg1+" é "+half+".\n" 
+    return answer   
+}
+//função 3
+function percentOf(arg1, arg2) {
+    let ord = [arg1,arg2].sort(function(a, b){return a > b})
+    let final =  ((ord[0] - ord[1]) / ord[1]) * -100
+    let answer = "\n" +ord[0]+" é " + final + "% de " + ord[1]+".\n"
+    return answer
+}
+//função 3.1
+function percentOf1(arg1, arg2) {
+    let ord = [arg1,arg2].sort(function(a, b){return a > b})
+    let final =  ((ord[0] - ord[1]) / ord[1]) * -100
+    return final
+}
+//função 4
+function areaOfCircle(arg1) {
+    let area = 2 * Math.PI * arg1
+    let delimitador = parseFloat(area.toFixed(2))
+    let answer ="\nA área de um círculo com raio "+arg1+" é "+delimitador+".\n"
+    return answer
+}
+//função 5
+function final(arg1) {
+    let metade = arg1/2
+    let quadrado = Math.pow(metade, 2)
+    let circulo = 2 * Math.PI * quadrado
+    let porcentagem = percentOf1(circulo, quadrado)
+    return "o numero doido é → " + porcentagem+ " mais retardado que isso, impossivel! Eu acho..."
+}
+
+
+//declarações de valores
+let btn = {
+1: document.querySelector("#square_button"),
+2: document.querySelector("#half_button"),
+3: document.querySelector("#percent_button"),
+4: document.querySelector("#area_button"),
+5: document.querySelector("#botaofunçao5")}
+
+let inputs = {
+1: document.querySelector("#square_input"),
+2: document.querySelector("#half_input"),
+3: document.querySelector("#percent1_input"),
+4: document.querySelector("#percent2_input"),
+5: document.querySelector("#area-input"),
+6: document.querySelector("#crazy")}
+
+let solução = document.querySelector("#solution")
+
+let resposta = document.querySelector("#resposta")
+
+// ouvindo os botões
+btn[1].addEventListener("click", function(){
+  solução.innerHTML = squareNumber(inputs[1].value) 
+})
+
+btn[2].addEventListener("click", function(){
+  solução.innerHTML = halfNumber(inputs[2].value)
+})
+
+btn[3].addEventListener("click", function(){
+  solução.innerHTML = percentOf(inputs[3].value, inputs[4].value)
+})
+
+btn[4].addEventListener("click", function(){
+  solução.innerHTML = areaOfCircle(inputs[5].value)
+})
+
+//função final
+btn[5].addEventListener("click", function(){
+  resposta.innerHTML = final(inputs[6].value) + " \nque background feio viu"
+})
+
+</script>
+</body>
+</html>

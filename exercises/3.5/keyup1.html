@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="text" id="texto">
+<p id="valor"></p>
+<script>
+    function remove(remove){
+        let primeira = remove[0] // coloca a primeira em uma variavel
+        let final = remove.slice(1) // coloca o resto das strings, sem a posição 0
+        let confronto = /[aeiouà-ú]/gi // coloca a conferencia de vogais dentro de uma variavel local
+        if (primeira =~ confronto) {
+            final = "x" + final
+            return final
+        } else {
+            return remove
+        }
+    }
+    var texto = document.getElementById("texto")
+    var valor = document.querySelector("#valor")
+    let vogais
+    texto.addEventListener("keyup", function(){
+        var value = this.value
+        vogais = remove(value) 
+        valor.innerHTML = vogais
+    if (texto.value.length > 10) {
+        valor.style.background = "red"
+    }
+})
+</script>
+</body>
+</html>

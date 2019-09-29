@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Select a new car from the list.</p>
+
+<select id="mySelect" >
+    <option value="Fuchsia">Fuchsia</option>
+    <option value="DarkGreen">DarkGreen</option>
+    <option value="Crimson">Crimson</option>
+    <option value="CornflowerBlue">CornflowerBlue</option>
+</select>
+
+<p>Selecione a cor mais bonita da Terra.</p>
+<p>A cor escolhida foi: </p>
+<p id="demo"></p>
+
+<script>
+    var troca = document.getElementById("demo")
+    let cor = ""
+    let carros = document.getElementById("mySelect")
+    carros.addEventListener("change", function(){
+        let options = this.options
+        let itemAtual = this.selectedIndex
+        cor = options[itemAtual].text
+        troca.style.backgroundColor = cor 
+        troca.innerHTML = "Sua escolha foi → " + cor + "     Cor feia da porra..."    
+    })
+</script>
+
+</body>
+</html>

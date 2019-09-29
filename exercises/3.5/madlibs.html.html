@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+</head>
+<body>
+
+<h1>Mad Libs</h1>
+
+<ul>
+<li>Substantivo: <input type="text" id="substantivo">
+<li>Adjetivo: <input type="text" id="adjetivo">
+<li>Nome de alguém: <input type="text" id="nome">
+</ul>
+
+<button id="libbutton">Chamar doideira!!!</button>
+<div id="historia"></div>
+
+<script>
+    function sorteio1() {
+        let a = Math.floor(Math.random() * 3)
+        return a
+    }
+
+    function sorteio2() {
+        let a = Math.floor(Math.random() * 12) + 1
+        return a
+    }
+
+    let dicionario = {
+    1: "Fiquei responsável de fazer a", 
+    2: "sobremesa no Natal e resolvi fazer um",
+    3: "estrogonofe de chocolate", 
+    4: "Na receita pedia um copo", 
+    5: "americano de conhaque,",
+    6: "só que eu pensava que copo americano",
+    7: "era o maior que tivesse em casa", 
+    8: "pois os copos dos filmes americanos eram enormes", 
+    9: "Resultado: todas as crianças da festa ficaram", 
+    10: "bêbadas e eu só não levei uma surra porque minha mãe", 
+    11: "estava bem alterada pelo litrão de",
+    12: "conhaque da sobremesa"}
+
+    let ides = [
+    document.getElementById("substantivo"),
+    document.getElementById("adjetivo"),
+    document.getElementById("nome")]
+
+    let historia = document.querySelector("#historia")
+    let btn = document.querySelector("#libbutton")
+
+    btn.addEventListener("click", function(){
+    historia.innerHTML = historia.innerHTML  + " "+ dicionario[sorteio2()] +" "+ ides[sorteio1()].value
+    
+    })
+    
+</script>
+</body>
+</html>
