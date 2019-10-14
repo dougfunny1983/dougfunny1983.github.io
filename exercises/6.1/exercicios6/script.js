@@ -45,7 +45,7 @@ window.onload = function() {
         option.value = chave
         option.innerHTML = valor
     }
-    chamarFilho()
+
 
     for (let key in estadosBrasileiros) {
         chamarFilho(key, estadosBrasileiros[key])
