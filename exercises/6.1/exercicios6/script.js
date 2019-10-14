@@ -37,19 +37,18 @@ window.onload = function() {
         'SE': 'Sergipe',
         'TO': 'Tocantins'
     }
-    let estado = document.querySelector("#estados")
+
 
     function chamarFilho(chave, valor) {
+        let estado = document.querySelector("#estados")
         let option = document.createElement("option")
         estado.appendChild(option)
         option.value = chave
         option.innerHTML = valor
     }
 
-
     for (let key in estadosBrasileiros) {
         chamarFilho(key, estadosBrasileiros[key])
-
     }
 
 
