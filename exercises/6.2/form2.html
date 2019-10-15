@@ -105,9 +105,9 @@
                         <input class="input is-focused is-rounded is-small" id='nome' name='nome' type='text' placeholder="Nome" required="required" />
                     </div>
                 </div>
-                <input class="input is-focused is-rounded is-small" id="email" name="email" type="email" placeholder="e-mail" required='required' maxlength="50" /><br>
-                <input class="input is-focused is-rounded is-small" type="number" name="cpf" id="CPF" required="required" maxlength="11" placeholder="CPF"><br>
-                <input class="input is-focused is-rounded is-small" type="text" name="cidade" id="Cidade" required='required' maxlength="28" placeholder="Cidade"><br>
+                <input class="input is-focused is-rounded is-small" id="email" name="email" type="email" placeholder="e-mail" required='required' maxlength="50" />
+                <input class="input is-focused is-rounded is-small" type="number" name="cpf" id="CPF" required="required" maxlength="11" placeholder="CPF">
+                <input class="input is-focused is-rounded is-small" type="text" name="cidade" id="Cidade" required='required' maxlength="28" placeholder="Cidade">
                 <label class="label" for='estados-brasil'>Estados Brasileiros</label>
                 <div class="select">
                     <select name="estados-brasil" id="estados" required='required'>
@@ -127,17 +127,16 @@
 
             </form>
             </fieldset>
-
+            <hr class="hr">
             <p class="label">Exercício 2</p>
 
             <label for="curriculo">Resumo do currículo</label>
             <div class="control">
                 <textarea class="textarea is-focused" name="curriculo" maxlength="1000" required='required'></textarea>
             </div>
-            <input class="input is-focused is-rounded is-small" type="text" name="cargo" id="cargo" required='required' maxlength="40" placeholder="Cargo"><br>
-            <input class="input is-focused is-rounded is-small" type="text" name="desCargo" id="desCargo" required='required' maxlength="500" placeholder="Descrição do cargo"><br>
-            <label class="input is-focused is-rounded is-small" for="data">Data de início</label><br>
-            <input class="input is-focused is-rounded is-small" type="date" name="data" id="data" required='required'><br>
+            <input class="input is-focused is-rounded is-small" type="text" name="cargo" id="cargo" required='required' maxlength="40" placeholder="Cargo">
+            <input class="input is-focused is-rounded is-small" type="text" name="desCargo" id="desCargo" required='required' maxlength="500" placeholder="Descrição do cargo"> <label class="input is-focused is-rounded is-small" for="data">Data de início</label>
+            <input class="input is-focused is-rounded is-small" type="date" name="data" id="data" required='required'>
             </fieldset>
             <input type="reset" name="b2" value="Limpar" class="button is-danger is-outlined" onclick="history.go(0)">
             <input type="submit" name="b1" value="Enviar" class="button is-primary is-outlined" id="enviar">
