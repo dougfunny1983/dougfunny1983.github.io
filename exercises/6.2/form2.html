@@ -90,52 +90,61 @@
 </head>
 
 <body>
-    <h1>Exercício de Segunda (15/10/2019)</h1>
-    <div class="formulario">
-        <form id="form" action="" method="">
-            <p class="label">Exercício 1</p>
-            <div class="field">
-                <div class="control">
-                    <input class="input is-focused is-rounded is-small" id='nome' name='nome' type='text' placeholder="Nome" required="required" />
+    <div class="field">
+        <div class="control">
+            <span>Exercício de Segunda (15/10/2019)</span>
+        </div>
+    </div>
+    <hr class="hr">
+    <section class="section">
+        <div class="formulario">
+            <form id="form" action="" method="">
+                <p class="label">Exercício 1</p>
+                <div class="field">
+                    <div class="control">
+                        <input class="input is-focused is-rounded is-small" id='nome' name='nome' type='text' placeholder="Nome" required="required" />
+                    </div>
                 </div>
-            </div>
-            <input class="input is-focused is-rounded is-small" id="email" name="email" type="email" placeholder="e-mail" required='required' maxlength="50" /><br>
-            <input class="input is-focused is-rounded is-small" type="number" name="cpf" id="CPF" required="required" maxlength="11" placeholder="CPF"><br>
-            <input class="input is-focused is-rounded is-small" type="text" name="cidade" id="Cidade" required='required' maxlength="28" placeholder="Cidade"><br>
-            <label class="label" for='estados-brasil'>Estados Brasileiros</label>
-            <div class="select">
-                <select name="estados-brasil" id="estados" required='required'>
+                <input class="input is-focused is-rounded is-small" id="email" name="email" type="email" placeholder="e-mail" required='required' maxlength="50" /><br>
+                <input class="input is-focused is-rounded is-small" type="number" name="cpf" id="CPF" required="required" maxlength="11" placeholder="CPF"><br>
+                <input class="input is-focused is-rounded is-small" type="text" name="cidade" id="Cidade" required='required' maxlength="28" placeholder="Cidade"><br>
+                <label class="label" for='estados-brasil'>Estados Brasileiros</label>
+                <div class="select">
+                    <select name="estados-brasil" id="estados" required='required'>
                 </select>
-            </div>
-            <form action="" method="" required="required" id="moradia">
-                <div class="control">
-                    <label class="radio">
+                </div>
+                <form action="" method="" required="required" id="moradia">
+                    <div class="control">
+                        <label class="radio">
                         <input type="radio" name="moradia" value="casa" checked>casa 
                     </label>
-                    <label class="radio"> 
+                        <label class="radio"> 
                         <input type="radio" name="moradia" value="apartamento">apartamento
                     </label>
-                </div>
+                    </div>
+                </form>
+
+
             </form>
+            </fieldset>
 
+            <p class="label">Exercício 2</p>
 
-        </form>
-        </fieldset>
+            <label for="curriculo">Resumo do currículo</label>
+            <div class="control">
+                <textarea class="textarea is-focused" name="curriculo" maxlength="1000" required='required'></textarea>
+            </div>
+            <input class="input is-focused is-rounded is-small" type="text" name="cargo" id="cargo" required='required' maxlength="40" placeholder="Cargo"><br>
+            <input class="input is-focused is-rounded is-small" type="text" name="desCargo" id="desCargo" required='required' maxlength="500" placeholder="Descrição do cargo"><br>
+            <label class="input is-focused is-rounded is-small" for="data">Data de início</label><br>
+            <input class="input is-focused is-rounded is-small" type="date" name="data" id="data" required='required'><br>
+            </fieldset>
+            <input type="reset" name="b2" value="Limpar" class="button is-danger is-outlined" onclick="history.go(0)">
+            <input type="submit" name="b1" value="Enviar" class="button is-primary is-outlined" id="enviar">
 
-        <p class="label">Exercício 2</p>
-
-        <label for="curriculo">Resumo do currículo</label><br>
-        <textarea name="curriculo" id="CV" cols="50" rows="10" maxlength="1000" required='required'></textarea><br>
-        <input class="input is-focused is-rounded is-small" type="text" name="cargo" id="cargo" required='required' maxlength="40" placeholder="Cargo"><br>
-        <input class="input is-focused is-rounded is-small" type="text" name="desCargo" id="desCargo" required='required' maxlength="500" placeholder="Descrição do cargo"><br>
-        <label class="input is-focused is-rounded is-small" for="data">Data de início</label><br>
-        <input class="input is-focused is-rounded is-small" type="date" name="data" id="data" required='required'><br>
-        </fieldset>
-        <input type="reset" name="b2" value="Limpar" class="btn" onclick="history.go(0)">
-        <input type="submit" name="b1" value="Enviar" class="btn" id="enviar">
-
-        </form>
-        <div id="informacoes"></div>
+            </form>
+    </section>
+    <div id="informacoes"></div>
     </div>
 
 </body>
