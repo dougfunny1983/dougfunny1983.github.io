@@ -1,13 +1,4 @@
 window.onload = function() {
-    console.log("TEste")
-    let regular = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/
-    let email = document.querySelector("#email").value
-    if (email = ~regular) {
-
-    } else {
-        alert("digite um email valido")
-    }
-
     let estadosBrasileiros = {
         'AC': 'Acre',
         'AL': 'Alagoas',
@@ -67,12 +58,17 @@ window.onload = function() {
     }
 
     function criandoTexto() {
-        let novoSpan = document.createElement("div")
-        for (const key in informacoes) {
-            informacoes.appendChild(novoSpan)
-            novoSpan.innerHTML = key + ": " + informacoes[key]
+        let novoDIV = document.createElement("div")
+        for (let key in informacoes) {
+            informacoes.appendChild(novoDIV)
+            novoDIV.innerHTML = key + ": " + informacoes[key]
         }
     }
+
+    let enviar = document.querySelector("#enviar")
+    enviar.addEventListener("click", function() {
+        criandoTexto()
+    })
 
 
 
