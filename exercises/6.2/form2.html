@@ -104,27 +104,32 @@
             <input class="input is-focused is-rounded is-small" type="text" name="cidade" id="Cidade" required='required' maxlength="28" placeholder="Cidade"><br>
             <label class="label" for='estados-brasil'>Estados Brasileiros</label><br>
             <select name="estados-brasil" id="estados" required='required'></select>
-
-
-
-
             <form action="" method="" required="required" id="moradia">
-                <input type="radio" name="moradia" value="casa" checked>casa
-                <input type="radio" name="moradia" value="apartamento">apartamento
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="moradia" value="casa" checked>casa 
+                    </label>
+                    <label class="radio"> 
+                        <input type="radio" name="moradia" value="apartamento">apartamento
+                    </label>
+                </div>
             </form>
-            </fieldset>
 
-            <p class="label">Exercício 2</p>
 
-            <label for="curriculo">Resumo do currículo</label><br>
-            <textarea name="curriculo" id="CV" cols="50" rows="10" maxlength="1000" required='required'></textarea><br>
-            <input class="input is-focused is-rounded is-small" type="text" name="cargo" id="cargo" required='required' maxlength="40" placeholder="Cargo"><br>
-            <input class="input is-focused is-rounded is-small" type="text" name="desCargo" id="desCargo" required='required' maxlength="500" placeholder="Descrição do cargo"><br>
-            <label class="input is-focused is-rounded is-small" for="data">Data de início</label><br>
-            <input class="input is-focused is-rounded is-small" type="date" name="data" id="data" required='required'><br>
-            </fieldset>
-            <input type="reset" name="b2" value="Limpar" class="btn" onclick="history.go(0)">
-            <input type="submit" name="b1" value="Enviar" class="btn" id="enviar">
+        </form>
+        </fieldset>
+
+        <p class="label">Exercício 2</p>
+
+        <label for="curriculo">Resumo do currículo</label><br>
+        <textarea name="curriculo" id="CV" cols="50" rows="10" maxlength="1000" required='required'></textarea><br>
+        <input class="input is-focused is-rounded is-small" type="text" name="cargo" id="cargo" required='required' maxlength="40" placeholder="Cargo"><br>
+        <input class="input is-focused is-rounded is-small" type="text" name="desCargo" id="desCargo" required='required' maxlength="500" placeholder="Descrição do cargo"><br>
+        <label class="input is-focused is-rounded is-small" for="data">Data de início</label><br>
+        <input class="input is-focused is-rounded is-small" type="date" name="data" id="data" required='required'><br>
+        </fieldset>
+        <input type="reset" name="b2" value="Limpar" class="btn" onclick="history.go(0)">
+        <input type="submit" name="b1" value="Enviar" class="btn" id="enviar">
 
         </form>
         <div id="informacoes"></div>
