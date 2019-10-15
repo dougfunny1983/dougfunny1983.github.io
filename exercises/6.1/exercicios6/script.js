@@ -51,6 +51,20 @@ window.onload = function() {
         chamarFilho(key, estadosBrasileiros[key])
     }
 
+    let informacoes = document.querySelector(".informacoes")
+    let dados = {
+        "nome": document.querySelector("#nome"),
+        "email": document.querySelector("#email"),
+        "CPF": document.querySelector("#CPF"),
+        "Cidade": document.querySelector("#Cidade"),
+        "estados": document.querySelector("#estados"),
+        "moradia": document.querySelector("#moradia"),
+        "CV": document.querySelector("#CV"),
+        "cargo": document.querySelector("#cargo"),
+        "desCargo": document.querySelector("#desCargo"),
+        "data": document.querySelector("#data"),
+    }
+
 
 
 
