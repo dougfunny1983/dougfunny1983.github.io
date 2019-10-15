@@ -51,7 +51,8 @@ window.onload = function() {
         chamarFilho(key, estadosBrasileiros[key])
     }
 
-    let informacoes = document.querySelector(".informacoes")
+    let informacoes = document.querySelector("#informacoes")
+
     let dados = {
         "nome": document.querySelector("#nome"),
         "email": document.querySelector("#email"),
@@ -64,6 +65,15 @@ window.onload = function() {
         "desCargo": document.querySelector("#desCargo"),
         "data": document.querySelector("#data"),
     }
+
+    function criandoTexto() {
+        let novoSpan = document.createElement("div")
+        for (const key in informacoes) {
+            informacoes.appendChild(novoSpan)
+            novoSpan.innerHTML = key + ": " + informacoes[key]
+        }
+    }
+
 
 
 
