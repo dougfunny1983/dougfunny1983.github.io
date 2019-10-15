@@ -44,30 +44,36 @@ window.onload = function() {
 
     let informacoes = document.querySelector("#informacoes")
 
-    let dados = {
-        "nome": document.querySelector("#nome"),
-        "email": document.querySelector("#email"),
-        "CPF": document.querySelector("#CPF"),
-        "Cidade": document.querySelector("#Cidade"),
-        "estados": document.querySelector("#estados"),
-        "moradia": document.querySelector("#moradia"),
-        "CV": document.querySelector("#CV"),
-        "cargo": document.querySelector("#cargo"),
-        "desCargo": document.querySelector("#desCargo"),
-        "data": document.querySelector("#data"),
+    function gerardados() {
+        let dados = {
+            "nome": document.querySelector("#nome").value,
+            "email": document.querySelector("#email").value,
+            "CPF": document.querySelector("#CPF").value,
+            "Cidade": document.querySelector("#Cidade").value,
+            "estado": document.querySelector("#estados").value,
+            "moradia": document.querySelector('input[name="moradia"]:checked').value,
+            "CV": document.querySelector("#CV").value,
+            "cargo": document.querySelector("#cargo").value,
+            "desCargo": document.querySelector("#desCargo").value,
+            "data": document.querySelector("#data").value
+        }
+        return dados
     }
 
-    function criandoTexto() {
-        let novoDIV = document.createElement("div")
-        for (let key in informacoes) {
-            informacoes.appendChild(novoDIV)
-            novoDIV.innerHTML = key + ": " + informacoes[key]
+    function criandoTexto(dados) {
+        let listaitem = document.createElement("ul")
+        informacoes.appendChild(listaitem)
+
+        for (let key in dados) {
+            let item = document.createElement('li')
+            item.innerHTML = key + ": " + dados[key]
+            listaitem.appendChild(item)
         }
     }
 
-    let enviar = document.querySelector("#enviar")
-    enviar.addEventListener("click", function() {
-        criandoTexto()
+    document.querySelector("#enviar").addEventListener('click', function() {
+
+        criandoTexto(gerardados())
     })
 
 

@@ -13,7 +13,7 @@
 <body>
     <h1>Exercício de Segunda (14/10/2019)</h1>
     <div class="formulario">
-        <form action="" method="post">
+        <form id="form" action="" method="">
             <fieldset>
                 <legend>Exercício 1</legend>
                 <input id='nome' name='nome' type='text' placeholder="Nome" required="required" /><br>
@@ -22,7 +22,7 @@
                 <input type="text" name="cidade" id="Cidade" required='required' maxlength="28" placeholder="Cidade"><br>
                 <label for='estados-brasil'>Estados Brasileiros</label><br>
                 <select name="estados-brasil" id="estados" required='required'></select><br>
-                <form action="" method="get" required="required" id="moradia">
+                <form action="" method="" required="required" id="moradia">
                     <input type="radio" name="moradia" value="casa" checked>casa
                     <input type="radio" name="moradia" value="apartamento">apartamento
                 </form>
@@ -37,9 +37,9 @@
                 <input type="date" name="data" id="data" required='required'><br>
             </fieldset>
             <input type="reset" name="b2" value="Limpar" class="btn" onclick="history.go(0)">
+            <input type="submit" name="b1" value="Enviar" class="btn" id="enviar">
 
         </form>
-        <input type="submit" name="b1" value="Enviar" class="btn" id="enviar">
         <div id="informacoes"></div>
     </div>
 
