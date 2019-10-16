@@ -90,11 +90,15 @@
 </head>
 
 <body>
-    <div class="field">
-        <div class="control">
-            <span>Exercício de Segunda (15/10/2019)</span>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">Exercício de Segunda (15/10/2019)</h1>
+
+            </div>
         </div>
-    </div>
+    </section>
+
     <hr class="hr">
     <section class="section">
         <div class="formulario">
@@ -129,38 +133,67 @@
                     <select name="estados-brasil" id="estados" required='required'>
                 </select>
                 </div>
-                <form action="" method="" required="required" id="moradia">
+                <div class="field">
                     <div class="control">
-                        <label class="radio">
-                        <input type="radio" name="moradia" value="casa" checked>casa 
-                    </label>
-                        <label class="radio"> 
-                        <input type="radio" name="moradia" value="apartamento">apartamento
-                    </label>
+                        <form action="" method="" required="required" id="moradia">
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" name="moradia" value="casa" checked>casa 
+                                </label>
+                                <label class="radio"> 
+                                <input type="radio" name="moradia" value="apartamento">apartamento
+                            </label>
+                            </div>
+                        </form>
                     </div>
-                </form>
-
-
+                </div>
             </form>
-            </fieldset>
+
             <hr class="hr">
             <p class="label">Exercício 2</p>
 
-            <label for="curriculo">Resumo do currículo</label>
-            <div class="control">
-                <textarea class="textarea is-focused" name="curriculo" maxlength="1000" required='required'></textarea>
+            <div class="field">
+                <div class="control">
+                    <label for="curriculo">Resumo do currículo</label>
+                    <div class="control">
+                        <textarea class="textarea is-focused" name="curriculo" maxlength="1000" required='required'></textarea>
+                    </div>
+                </div>
             </div>
-            <input class="input is-focused is-rounded is-small" type="text" name="cargo" id="cargo" required='required' maxlength="40" placeholder="Cargo">
-            <input class="input is-focused is-rounded is-small" type="text" name="desCargo" id="desCargo" required='required' maxlength="500" placeholder="Descrição do cargo"> <label class="input is-focused is-rounded is-small" for="data">Data de início</label>
-            <input class="input is-focused is-rounded is-small" type="date" name="data" id="data" required='required'>
-            </fieldset>
-            <input type="reset" name="b2" value="Limpar" class="button is-danger is-outlined" onclick="history.go(0)">
-            <input type="submit" name="b1" value="Enviar" class="button is-primary is-outlined" id="enviar">
+            <div class="field">
+                <div class="control">
+                    <input class="input is-focused is-rounded is-small" type="text" name="cargo" id="cargo" required='required' maxlength="40" placeholder="Cargo">
+                </div>
+            </div>
 
+            <div class="field">
+                <div class="control">
+                    <input class="input is-focused is-rounded is-small" type="text" name="desCargo" id="desCargo" required='required' maxlength="500" placeholder="Descrição do cargo">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <label for="data">Data de início</label>
+                    <input class="input is-focused is-rounded is-small" type="date" name="data" id="data" required='required'>
+
+
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <input type="reset" name="b2" value="Limpar" class="button is-danger is-outlined" onclick="history.go(0)">
+                    <input type="submit" name="b1" value="Enviar" class="button is-primary is-outlined" id="enviar">
+                </div>
+            </div>
             </form>
     </section>
-    <div id="informacoes"></div>
+    <div class="field">
+        <div class="control">
+            <div id="informacoes"></div>
+        </div>
     </div>
+
+
 
 </body>
 
