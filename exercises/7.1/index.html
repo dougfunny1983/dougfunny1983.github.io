@@ -5,56 +5,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="bulma.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="http://3.bp.blogspot.com/-D1t4cVW8xm4/VVTDgYwVSPI/AAAAAAAAA78/THNL9iLKBgo/s1600/uw-2010-06-11.jpg">
     <title>Stomatopoda</title>
     <style>
-        #navBar {
-            display: flex;
-            justify-content: space-between;
-        }
+
     </style>
 </head>
 
 <body>
     <header>
-
-        <nav class="navbar navbar-expand-xl " style="background-color: #dbb7ec;" id="navBar">
-            <a class="navbar-brand" href="#">
-                <img src="http://3.bp.blogspot.com/-D1t4cVW8xm4/VVTDgYwVSPI/AAAAAAAAA78/THNL9iLKBgo/s1600/uw-2010-06-11.jpg" width="30" height="30" class="d-inline-block align-top" alt=""> Stomatopoda
-            </a>
-
-            <ul class="navbar-nav ">
-                <li class="nav-item ">
-                    <a class="nav-link " href="# ">Página Inicial <span class="sr-only ">(Página atual)</span></a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link " href="# ">Sobre</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link " href="# ">Contato</a>
-                </li>
-
-            </ul>
-
+        <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        Página Inicial
+                    </a>
+                    <a class="navbar-item">
+                        Sobre
+                    </a>
+                    <a class="navbar-item">
+                        Contato
+                    </a>
+                </div>
+            </div>
         </nav>
-
-        <h1 class="display-4 text-center ">Soco a 80km/h: Conheça o Stomatopoda</h1>
+        <h1 class="title is-1">Soco a 80km/h: Conheça o Stomatopoda</h1>
         <hr>
     </header>
     <section>
         <article>
-            <aside>
-                <p>Fatos sobre o Stomatopoda</p>
-            </aside>
+            <h3 class="subtitle is-3">Fatos sobre o Stomatopoda</h3>
+            <ul>
+                <li>
+                    <span class="tag is-danger is-large" ">Olhos: </span><p>Esses animais possuem o mais complexo sistema de visão de cores do mundo animal, porque eles podem ver 16 cores primárias, por possuírem 16 pigmentos diferentes em sua retina.</p>
+                </li>
+                <li><span class="tag is-warning is-large ">Soco:</span><p>As maiores esmagadoras, tais como exemplares de Odontodactylus scyllarus,
+                    são capazes de desferir um dos mais rápidos e violentos golpes do reino animal, 
+                    um soco que pode apresentar a velocidade de um tiro calibre .22 (equivalente a 720km/h) e uma força de impacto de 60 kg/cm². Essa força esmagadora é a responsável pelo seu título de "lagosta-boxeadora " e é capaz de facilmente quebrar a carapaça de um caranguejo, as conchas duras e calcificadas de gastrópodes ou até mesmo quebrar o vidro reforçado de um aquário.</p>
+                </li>
+                <li><span class="tag is-success is-large ">Habitat</span><p>Estomatópodes podem ser encontrados em quase todo o litoral brasileiro, mas não são animais fáceis de se observar pelos seus hábitos mais furtivos. Devem ser manuseados com muita cautela pois são animais preparados para se defender com força, caso sejam incomodados.</p>
+                </li>
+            </ul>
+            <hr>
         </article>
+        
+    </section>
+    <section>
+        <h4 class="subtitle is-4 ">Mais sobre essa animal fantástico</h2>
+
+        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth ">
+        
+          <tr>
+            <td><b>Nome Cientíco</b></td>
+            <td><i> Odontodactylus scyllarus</i></td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+          </tr>
+          <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+          </tr>
+          <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+          </tr>
+          <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+          </tr>
+        </table>
+
+
+
     </section>
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
 </body>
 
 </html>
