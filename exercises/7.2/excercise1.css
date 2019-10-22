@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(229, 157, 157);
+}
+
+h1 {}
+
+h2 {}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 0;
+}
+
+@media (max-width: 400px) {
+    body {
+        background-color: rgb(149, 177, 149);
+        font-size: 1.4em;
+        margin: 1em;
+    }
+    h1 {
+        font-size: 1.2em;
+    }
+    img {
+        margin: 1em;
+        padding: 1em;
+    }
+}
