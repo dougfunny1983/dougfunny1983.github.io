@@ -48,27 +48,44 @@
         
         .green {
             background-color: green;
+            animation-name: animaTudo;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
         }
         
         .blue {
             background-color: blue;
+            animation-name: animaTudo;
         }
         
         .red {
             background-color: red;
+            animation-name: animaTudo;
         }
         
         .yellow {
             background-color: yellow;
+            animation-name: animaTudo;
         }
         
         .black {
             background-color: black;
+            animation-name: animaTudo;
         }
         
         .medium {
             width: 50px;
             height: 50px;
+        }
+        
+        @keyframes animaTudo {
+            from {
+                margin-left: 0%;
+            }
+            to {
+                margin-left: 95%;
+            }
         }
     </style>
 </head>
