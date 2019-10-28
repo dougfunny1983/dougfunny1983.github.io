@@ -1,0 +1,1 @@
+const trocador = (palavra, string) => string.replace(`x`, palavra)
