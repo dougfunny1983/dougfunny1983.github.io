@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 const books = [{
         id: 1,
         name: 'As Crônicas de Gelo e Fogo',
@@ -70,10 +72,11 @@ const expected_result = {
     },
     releaseYear: 1954,
 }
-const palavraDesejada = /^[A-Z]\.\W[A-Z]\.\W[A-Z]\.\W/
 
-const valorDesejado = books.find(livro => palavraDesejada.test(livro.author.name))
+const palavraDesejada = /^[A-Z]\.\W[A-Z]\.\W[A-Z]\.\W/i
 
+function authorWith3DotsOnName() {
+    return books.find(livro => palavraDesejada.test(livro.author.name))
+}
 
-
-console.log(valorDesejado)
+assert.deepEqual(authorWith3DotsOnName(), expected_result);
