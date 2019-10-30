@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 const books = [{
         id: 1,
         name: 'As Crônicas de Gelo e Fogo',
@@ -69,5 +71,8 @@ const expected_result = [
     'O Chamado de Cthulhu - Terror - H. P. Lovecraft'
 ];
 
-const lista = books.map((livro) => `${livro.name} - ${livro.genre} - ${livro.author.name}`)
-console.log(lista)
+function formatedBookNames() {
+    return books.map((livro) => `${livro.name} - ${livro.genre} - ${livro.author.name}`)
+}
+
+assert.deepEqual(formatedBookNames(), expected_result);
