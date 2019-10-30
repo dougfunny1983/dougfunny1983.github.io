@@ -59,20 +59,7 @@ const books = [{
         releaseYear: 1928,
     },
 ];
-const expected_result = {
-    author: {
-        birthYear: 1948,
-        name: 'George R. R. Martin'
-    },
-    genre: 'Fantasia',
-    id: 1,
-    name: 'As Crônicas de Gelo e Fogo',
-    releaseYear: 1991
-};
-const maior = books.map((livro) => livro.name).reduce((a, b) => b.length > a.length ? b : a)
-const valorFinal = books.find(livro => livro.name === maior)
-const modificada = `author: ${valorFinal["author"]['name']}`
-console.log(modificada)
+
 
 
 
