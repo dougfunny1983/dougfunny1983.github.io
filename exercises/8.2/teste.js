@@ -59,15 +59,16 @@ const books = [{
         releaseYear: 1928,
     },
 ];
+function myFunction(item) {
+    let index
+    for (index = 0; index < item.length; index++) {
+        return index
+        
+    }
+    
+}
 
-const expected_result = [
-    'As Crônicas de Gelo e Fogo - Fantasia - George R. R. Martin',
-    'O Senhor dos Anéis - Fantasia - J. R. R. Tolkien',
-    'Fundação - Ficção Científica - Isaac Asimov',
-    'Duna - Ficção Científica - Frank Herbert',
-    'A Coisa - Terror - Stephen King',
-    'O Chamado de Cthulhu - Terror - H. P. Lovecraft'
-];
 
-const lista = books.map((livro) => `${livro.name} - ${livro.genre} - ${livro.author.name}`)
-console.log(lista)
+const lista = books.map((livro) => livro.releaseYear).sort()
+const listaOrdenada = books.map((livro) => livro.releaseYear === lista[0] || livro.releaseYear === lista[1] )
+console.log(listaOrdenada)
