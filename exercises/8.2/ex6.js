@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 const books = [{
         id: 1,
         name: 'As Crônicas de Gelo e Fogo',
@@ -59,23 +61,21 @@ const books = [{
         releaseYear: 1928,
     },
 ];
+
 const expected_result = {
-    author: {
-        birthYear: 1948,
-        name: 'George R. R. Martin'
-    },
-    genre: 'Fantasia',
     id: 1,
     name: 'As Crônicas de Gelo e Fogo',
-    releaseYear: 1991
+    genre: 'Fantasia',
+    author: {
+        name: 'George R. R. Martin',
+        birthYear: 1948
+    },
+    releaseYear: 1991,
 };
-const maior = books.map((livro) => livro.name).reduce((a, b) => b.length > a.length ? b : a)
-const valorFinal = books.find(livro => livro.name === maior)
-const modificada = `author: ${valorFinal["author"]['name']}`
-console.log(modificada)
 
+function longestNamedBook() {
+    const maior = books.map((livro) => livro.name).reduce((a, b) => b.length > a.length ? b : a)
+    return books.find(livro => livro.name === maior)
+}
 
-
-
-
-
+assert.deepEqual(longestNamedBook(), expected_result);
