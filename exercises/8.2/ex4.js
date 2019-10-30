@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 const books = [{
         id: 1,
         name: 'As Crônicas de Gelo e Fogo',
@@ -66,12 +68,9 @@ const expected_result = [
     'O Chamado de Cthulhu'
 ]
 
-const idade = (ano) => (new Date().getYear() + 1900) - ano
-const valor = books.filter((livro) => idade(livro.releaseYear) > 60 ).map((array) => array.name)
-console.log(valor)
+function oldBooks() {
+    const idade = (ano) => (new Date().getYear() + 1900) - ano
+    return books.filter((livro) => idade(livro.releaseYear) > 60).map((array) => array.name)
+}
 
-
-
-
-
-
+assert.deepEqual(oldBooks(), expected_result);
