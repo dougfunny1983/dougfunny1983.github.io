@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 const books = [{
         id: 1,
         name: 'As Crônicas de Gelo e Fogo',
@@ -60,4 +62,16 @@ const books = [{
     },
 ];
 
+const expected_result = [
+    'Frank Herbert',
+    'George R. R. Martin',
+    'Isaac Asimov',
+    'J. R. R. Tolkien'
+]
 
+function fantasyOrScienceFictionAuthors() {
+    const palavraDesejada = ['Ficção Científica', 'Fantasia']
+    return books.filter((livro) => livro.genre === palavraDesejada[0] || livro.genre === palavraDesejada[1]).map((array) => array.author.name).sort()
+}
+
+assert.deepEqual(fantasyOrScienceFictionAuthors(), expected_result);
