@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 const books = [{
         id: 1,
         name: 'As Crônicas de Gelo e Fogo',
@@ -86,11 +88,14 @@ const expected_result = [{
     }
 ];
 
-const valores = books.map((livro) => {
-    return {
-        age: livro.releaseYear - livro.author.birthYear,
-        author: livro.author.name
-    }
-})
-const segundaLista = valores.sort((idadeA, idadeB) => idadeA.age - idadeB.age)
-console.log(segundaLista)
+function nameAndAge() {
+    const valores = books.map((livro) => {
+        return {
+            age: livro.releaseYear - livro.author.birthYear,
+            author: livro.author.name
+        }
+    })
+    return valores.sort((idadeA, idadeB) => idadeA.age - idadeB.age)
+}
+
+assert.deepEqual(nameAndAge(), expected_result);
