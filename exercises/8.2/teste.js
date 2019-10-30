@@ -59,16 +59,6 @@ const books = [{
         releaseYear: 1928,
     },
 ];
-function myFunction(item) {
-    let index
-    for (index = 0; index < item.length; index++) {
-        return index
-        
-    }
-    
-}
+const lista = books.sort((lancamentoA, lancamentoB) => lancamentoB.releaseYear - lancamentoB.releaseYear)
 
-
-const lista = books.map((livro) => livro.releaseYear).sort()
-const listaOrdenada = books.map((livro) => livro.releaseYear === lista[0] || livro.releaseYear === lista[1] )
-console.log(listaOrdenada)
+console.log(lista)

@@ -125,7 +125,7 @@ const expected_result = [{
 ];
 
 function booksOrderedByReleaseYearDesc() {
-    // escreva aqui seu código
+    return books.sort((lancamentoA, lancamentoB) => lancamentoB.releaseYear - lancamentoA.releaseYear)
 }
 
 
