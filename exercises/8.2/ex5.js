@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 const books = [{
         id: 1,
         name: 'As Crônicas de Gelo e Fogo',
@@ -59,14 +61,13 @@ const books = [{
         releaseYear: 1928,
     },
 ];
-const idade = (nascimento, dataLanObra) => dataLanObra - nascimento
-const somaDasIdades = books.map((valor) => idade(valor.author.birthYear, valor.releaseYear))
-const tamanho = somaDasIdades.length
-const mediaIdadesTotal = somaDasIdades.reduce((total, numero) => total + numero) / tamanho
-console.log(total)
 
+const expected_result = 43;
 
+function averageAge() {
+    const idade = (dataNascimento, dataLancamentoObra) => dataLancamentoObra - dataNascimento
+    const somaDasIdades = books.map((valor) => idade(valor.author.birthYear, valor.releaseYear))
+    return somaDasIdades.reduce((total, numero) => total + numero) / somaDasIdades.length
+}
 
-
-
-
+assert.equal(averageAge(), expected_result);
