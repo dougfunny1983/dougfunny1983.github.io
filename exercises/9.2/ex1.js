@@ -1,6 +1,5 @@
 const planetDistanceFromSun = ({ name, distanceFromSun: { value, measurementUnit } }) =>
   `${name} is ${value} ${measurementUnit} apart from the Sun`
-
 const mars = {
   name: "Mars",
   distanceFromSun: {
@@ -8,7 +7,6 @@ const mars = {
     measurementUnit: "kilometers"
   }
 }
-
 const venus = {
   name: "Venus",
   distanceFromSun: {
@@ -16,7 +14,6 @@ const venus = {
     measurementUnit: "kilometers"
   }
 }
-
 const jupiter = {
   name: "Jupiter",
   distanceFromSun: {
@@ -24,7 +21,6 @@ const jupiter = {
     measurementUnit: "kilometers"
   }
 }
-
 console.log(planetDistanceFromSun(mars)) // 1, porque não existe definição para elas funcionarem de forma assincrona.
 console.log(planetDistanceFromSun(venus)) // 2
 console.log(planetDistanceFromSun(jupiter)) // 3
