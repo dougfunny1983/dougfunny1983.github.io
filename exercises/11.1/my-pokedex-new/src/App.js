@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import Pokemon from "./Pokemon";
-//import Pokedex from "./Pokedex";
 import Data from "./data";
 import Button from "./Button";
 
@@ -15,10 +14,7 @@ class App extends React.Component {
 
   setBtnCont = () => {
     this.setState({
-      contador:
-        this.state.contador === 8
-          ? 0
-          : (this.state.contador = this.state.contador + 1)
+      contador: this.state.contador === 8 ? 0 : (this.state.contador = this.state.contador + 1)
     });
   };
   render() {
