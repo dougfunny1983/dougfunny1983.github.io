@@ -9,13 +9,11 @@ class Heroes extends Component {
     };
   }
 
-  theChosenOneWas = (state) => {
-    this.setState((state) =>({chooseYourFavorite: state}))
+  theChosenOneWas = (valor) => {
+    this.setState({chooseYourFavorite: valor})
   }
 
- 
-
-  creatHero = (id, item,funct) => <button key={id} type="button" onClick={()=> funct}>{item}</button>
+  creatHero = ({id, item}) => <button key={id} type="button" onClick={()=> this.theChosenOneWas(item)}>{item}</button>
 
   render() {
     const listHero = ['Ursa', 'Sven', 'Luna', 'Phantom Assassin', 'Sniper', 'Girocopter', 'Huskar']
@@ -26,10 +24,10 @@ class Heroes extends Component {
 
     return (
       <div>
-        <input type="text" value={this.state.chooseYourFavorite}/>
-        <div>
-      {newArray.map(select => this.creatHero(select.id,select.item,this.theChosenOneWas(select.item)))}
-        </div>
+        <button type="text" onClick={}> {this.state.chooseYourFavorite}</button>
+          <div>
+            {newArray.map(select => this.creatHero(select))}
+          </div>
       </div>
     );
   }
