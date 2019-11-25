@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
 import Heroes from './Heroes'
-import Criandofilho from './Criandofilho'
-
 
 class App extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //   };
+  // }
   render() {
     return (
-      <Heroes>
-       <Criandofilho/>
-      </Heroes>
+      <Heroes />
+      
+      
     )
   }
 }
