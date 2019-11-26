@@ -5,32 +5,43 @@ class Heroes extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      chooseYourFavorite: ''
+      chooseYourFavorite: this.props.chooseYourFavorite,
+      display: 'none'
     };
+    
   }
 
-  theChosenOneWas = (valor) => {
-    this.setState({chooseYourFavorite: valor})
-  }
+openAndClose = () => {
+  this.state.display === "none"
+    ? this.setState({ display: "block" })
+    : this.setState({ display: "none" });
+}
 
-  creatHero = ({id, item}) => <button key={id} type="button" onClick={()=> this.theChosenOneWas(item)}>{item}</button>
+theChosenOneWas = (valor) => {
+  this.setState({chooseYourFavorite: valor})
+}
+
+  creatHero = ({id, item}) => <li key={id} onClick={()=> this.theChosenOneWas(item)}>{item}</li>
 
   render() {
-    const listHero = ['Ursa', 'Sven', 'Luna', 'Phantom Assassin', 'Sniper', 'Girocopter', 'Huskar']
+    console.log(this.state)
+    console.log("----------------------------")
+    console.log(this.props)
+    const newArray = this.props.heroes.map((select, index) => ({"id": index +1, "item": select}));
   
-    const newArray = listHero.map((select, index) => ({"id": index +1, "item": select}));
-  
-    console.log(newArray)
-
     return (
-      <div>
-        <button type="text" onClick={}> {this.state.chooseYourFavorite}</button>
-          <div>
+      <div className='App'>
+        <h1 onClick={this.openAndClose} > {this.state.chooseYourFavorite}</h1>
+          <ol style={{ display: this.state.display }}>
             {newArray.map(select => this.creatHero(select))}
-          </div>
+          </ol>
       </div>
     );
   }
 }
 
 export default Heroes;
+
+Heroes.defaultProps = {
+  chooseYourFavorite: 'Click Here'
+};
