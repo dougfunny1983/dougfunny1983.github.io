@@ -7,18 +7,23 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // lista:[],
+      lista:[],
     };
   }
 
-  componentDidUpdate() {}
+  componentDidUpdate() {
 
+  }
+  
   teste = () => {
-    console.log(<Doguitchos />);
+    const value = <Doguitchos/>
+    console.log(value);
+    this.setState({
+      lista:[value]
+    })
+    
   };
-  // this.setState({
 
-  // })
 
   //   render () {
   //     return Dados.map(select => <CriarPokemon dados={select}/>);
@@ -26,11 +31,17 @@ export default class App extends Component {
   // }
 
   render() {
+    const {value} = this.state
+    console.log('/////////////////////////////');
+    console.log(value);
+    console.log('////////////////////////////');
     return (
       <div className="App">
         <div className="App-header">
           <div className="Flex-box">
+            {value}
             <Button pushImg={this.teste}></Button>
+
           </div>
         </div>
       </div>
