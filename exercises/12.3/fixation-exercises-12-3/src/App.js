@@ -17,7 +17,8 @@ class App extends Component {
           </ul>  
           <Route exact path="/" component={Home} />
           <Route path="/About" component={About} />
-          <Route path="/User" component={User} />
+          <Route path="/User" component= {User} greetingMessage={"Good Morning"} />
+          {/* <Route path="/User" component={User} /> */}
         </BrowserRouter>
       </header>
     );
