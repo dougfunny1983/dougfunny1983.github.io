@@ -7,40 +7,44 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lista:[],
+      showDoguitchos: false,
     };
   }
 
-  componentDidUpdate() {
-
-  }
-  
-  teste = () => {
-    const value = <Doguitchos/>
-    console.log(value);
+  choorceDoguitos = () => {
+    let showDoguitchosCurrent = !this.state.showDoguitchos;
     this.setState({
-      lista:[value]
-    })
+      showDoguitchos: showDoguitchosCurrent,
+    });
+  }
+
+  // teste = () => {
+  //   const value = <Doguitchos/>
+  //   console.log(value);
+  //   this.setState({
+  //     lista:[value]
+  //   })
     
-  };
+  // };
 
 
-  //   render () {
-  //     return Dados.map(select => <CriarPokemon dados={select}/>);
-  // }
-  // }
+//   render() {
+//     return (
+//       <div className="App">
+//       <button onClick={}>{this.state.showDoguitchos? "Fechar Doguitchos" : "Abrir Doguitchos"}</button>
+//         {this.state.showDoguitchos ? <Doguitchos/ > : <p>Nada sem Doguitchos por enquantos!</p>}
+//       </div>
+//     );
+//   }
+// }
 
   render() {
-    const {value} = this.state
-    console.log('/////////////////////////////');
-    console.log(value);
-    console.log('////////////////////////////');
     return (
       <div className="App">
         <div className="App-header">
           <div className="Flex-box">
-            {value}
-            <Button pushImg={this.teste}></Button>
+          {this.state.showDoguitchos ? <Doguitchos/ > : <p>Nada sem Doguitchos por enquantos!</p>}
+            <Button pushImg={this.choorceDoguitos}></Button>
 
           </div>
         </div>
