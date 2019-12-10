@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cartas</title>
+    <style>
+        body {
+            background-color: blueviolet;
+        }
+        
+        .cinco-de-ouros {
+            background: url(cartas/cinco-de-ouros.png) no-repeat;
+        }
+        
+        .nove-de-espadas {
+            background: url(cartas/nove-de-espadas.png) no-repeat;
+        }
+        
+        .quatro-de-paus {
+            background: url(cartas/quatro-de-paus.png) no-repeat;
+        }
+        
+        .seis-de-copas {
+            background: url(cartas/seis-de-copas.png) no-repeat;
+        }
+        
+        .sete-de-paus {
+            background: url(cartas/sete-de-paus.png) no-repeat;
+        }
+        
+        .tres-de-ouro {
+            background: url(cartas/tres-de-ouros.png) no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <figure class="pai">
+        <img id="cartas" src="cartas/verso-da-carta.png" alt="CartasdeBaralho">
+    </figure>
+    <script>
+        let pai = document.querySelector(".pai")
+        let gridPrincipal = document.querySelector("#cartas")
+
+        function gridCartas() {
+            let cartas = [
+                "cinco-de-ouros",
+                "nove-de-espadas",
+                "quatro-de-paus",
+                "seis-de-copas",
+                "sete-de-espadas",
+                "sete-de-paus",
+                "tres-de-ouros"
+            ]
+            return cartas[Math.floor(Math.random() * 7)]
+        }
+
+        function adicionarElemento(classe) {
+            let imagem = document.createElement("img")
+            imagem.setAttribute("class", "classe")
+            pai.appendChild(imagem)
+        }
+
+
+        gridPrincipal.addEventListener("click", function() {
+            console.log("teste")
+        })
+    </script>
+
+</body>
+
+</html>

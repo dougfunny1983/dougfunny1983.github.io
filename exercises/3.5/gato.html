@@ -5,7 +5,11 @@
 <title> Passeio do gato </title> 
 
 <style>
-.btn:focus, .btn::-moz-focus-inner {
+.btn:focus{
+outline:none;
+border:none;
+}
+.btn::-moz-focus-inner {
 outline:none;
 border:none;
 }
@@ -51,28 +55,16 @@ box-shadow:none;
 let botão = document.querySelector("#botão")
 let posição = parseInt(gato.style.marginLeft)
 let gato = document.querySelector("#gato")
-function começa() {
-    posição = 0
-}
-botão.addEventListener("click", function(event) {
-    botão.disabled = true
+
+botão.addEventListener("click", function() {
     gato.timer = setInterval(function() {
-        posição = posição + Math.random() * 60 + 'px'
-        if (posição > window.innerWidth) {
-            
-            
-        }
+    posição = posição + Math.random() * 60 + 'px'
+    //if (posição > window.innerWidth) {
+    //    posição -= Math.random() * 60 + 'px'
+        
+    //}
     }, 60)
 
-    gato.timer = setInterval(function() {
-            posição = posição + Math.random() * 60 + 'px'
-            if (posição > window.innerWidth) {
-                
-                
-            }
-        }, 60)
-
 </script>
-
 </body> 
 </html>

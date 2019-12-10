@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 3</title>
+</head>
+
+<body>
+    <button type="button" id="btn">Clique aqui</button>
+    <span id="valor"></span>
+    <script>
+        const pegarId = (id) => document.getElementById(id)
+        const acumuladorDeCliques = () => {
+            let clickCount = 0
+            pegarId("btn").addEventListener('click', () => {
+                console.log('teste')
+                clickCount += 1
+                pegarId('valor').innerHTML = clickCount
+            })
+        }
+        acumuladorDeCliques()
+    </script>
+</body>
+
+</html>

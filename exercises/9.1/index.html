@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex do dia 9.1</title>
+    <style>
+        body {
+            margin: 5em;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        button {
+            border-top: 1px solid #96d1f8;
+            background: #65a9d7;
+            background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+            background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+            background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+            background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+            background: -o-linear-gradient(top, #3e779d, #65a9d7);
+            padding: 12px 24px;
+            -webkit-border-radius: 26px;
+            -moz-border-radius: 26px;
+            border-radius: 26px;
+            -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+            -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+            box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+            text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+            color: white;
+            font-size: 23px;
+            font-family: Georgia, serif;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+        
+        button:hover {
+            border-top-color: #28597a;
+            background: #28597a;
+            color: #ccc;
+        }
+        
+        button:active {
+            border-top-color: #1b435e;
+            background: #1b435e;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            document.body.style.color = localStorage.getItem('fonteCor')
+            document.body.style.backgroundColor = localStorage.getItem('cor')
+            document.body.style.fontSize = localStorage.getItem('tamanhoFonte')
+            document.body.style.fontFamily = localStorage.getItem('fonte')
+            document.body.style.lineHeight = localStorage.getItem('larguraFonte')
+        }
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <h1>Estratégias em um Novo Paradigma Globalizado</h1>
+        <p>
+            Gostaria de enfatizar que a percepção das dificuldades é uma das consequências das condições financeiras e administrativas exigidas. Desta maneira, o julgamento imparcial das eventualidades cumpre um papel essencial na formulação do remanejamento dos
+            quadros funcionais. A prática cotidiana prova que o entendimento das metas propostas exige a precisão e a definição do sistema de participação geral. No entanto, não podemos esquecer que o desenvolvimento contínuo de distintas formas de atuação
+            auxilia a preparação e a composição das posturas dos órgãos dirigentes com relação às suas atribuições. Do mesmo modo, a necessidade de renovação processual estende o alcance e a importância do fluxo de informações.
+        </p>
+        <p>
+            Assim mesmo, o aumento do diálogo entre os diferentes setores produtivos deve passar por modificações independentemente das condições inegavelmente apropriadas. Nunca é demais lembrar o peso e o significado destes problemas, uma vez que a valorização
+            de fatores subjetivos acarreta um processo de reformulação e modernização das direções preferenciais no sentido do progresso. O incentivo ao avanço tecnológico, assim como o fenômeno da Internet promove a alavancagem do orçamento setorial.
+
+        </p>
+        <p>
+            É importante questionar o quanto o desafiador cenário globalizado oferece uma interessante oportunidade para verificação das regras de conduta normativas. O cuidado em identificar pontos críticos no início da atividade geral de formação de atitudes pode
+            nos levar a considerar a reestruturação das diretrizes de desenvolvimento para o futuro.
+
+        </p>
+    </div>
+    <div>
+        <label for="btn">Escolha o fundo</label><br>
+        <button class="btn" onclick="azul()" style="background-color: aqua">Azul</button>
+        <button class="btn" onclick="verde()" style="background-color:chartreuse">Verde</button>
+        <button class="btn" onclick="chocolate()" style="background-color:chocolate">Chocolate</button>
+        <button class="btn" onclick="amarelo()" style="background-color:yellow">Amarelo</button>
+    </div>
+    <br>
+    <br>
+    <div>
+
+        <label for="btn-cor-fonte">Escolha a cor da fonte</label><br>
+        <button class="btn-cor-fonte" style="background-color:white" value="white">Branca</button>
+        <button class="btn-cor-fonte" style="background-color:black" value="black">Preta</button>
+        <button class="btn-cor-fonte" style="background-color: aqua" value="blue">Azul</button>
+        <button class="btn-cor-fonte" style="background-color:yellow" value="yellow">amarela</button>
+
+    </div>
+    <br>
+    <br>
+    <div>
+        <label for="btn-fonte">Escolha o estilo da fonte</label><br>
+        <button class="btn-fonte" style="font-family: serif" value='serif'>serif</button>
+        <button class="btn-fonte" style="font-family: sans-serif" value='sans-serif'>sans-serif</button>
+        <button class="btn-fonte" style="font-family: monospace" value='monospace'>monospace</button>
+        <button class="btn-fonte" style="font-family: cursive" value='cursive'>cursive</button>
+        <button class="btn-fonte" style="font-family: fantasy" value='fantasy'>fantasy</button>
+    </div>
+    <br><br><br>
+    <div><label for="volume">Escolha o tamanho das letras</label>
+        <input id="volume1" class="volume" type='range' value='20' max='30'>
+        <span id="span1">20 PX</span>
+    </div>
+    <br><br><br>
+    <div><label for="volume">Escolha o espaçamento entre as letras</label>
+        <input id="volume2" class="volume" type='range' value='100' max='200'>
+        <span id="span2">100%</span>
+    </div>
+    <script>
+        let range1 = document.querySelector('#volume1'),
+            value1 = document.querySelector('#span1')
+
+        range1.addEventListener('input', function() {
+            value1.textContent = `${this.value} PX`
+            let tamanhoFonte = this.value
+            localStorage.tamanhoFonte = `${tamanhoFonte}px`
+            document.body.style.fontSize = tamanhoFonte + "PX"
+
+        })
+        let range2 = document.querySelector('#volume2'),
+            value2 = document.querySelector('#span2')
+
+        range2.addEventListener('input', function() {
+            value2.textContent = `${this.value}%`
+            let larguraFonte = this.value
+            localStorage.larguraFonte = `${larguraFonte}%`
+            document.body.style.lineHeight = larguraFonte + "%"
+
+        })
+        const listaBtncorFonte = document.getElementsByClassName('btn-cor-fonte')
+        for (let btn of listaBtncorFonte) {
+            btn.addEventListener('click', event => {
+                let corfonte = event.target.value
+                localStorage.fonteCor = corfonte
+                document.body.style.color = corfonte
+            })
+        }
+        const listaFonte = document.getElementsByClassName('btn-fonte')
+        for (let btn of listaFonte) {
+            btn.addEventListener('click', event => {
+                let fonte = event.target.value
+                localStorage.fonte = fonte
+                document.body.style.fontFamily = fonte
+            })
+        }
+
+
+        function azul() {
+            localStorage.cor = 'blue'
+            document.body.style.backgroundColor = localStorage.cor
+
+        }
+
+        function verde() {
+            localStorage.cor = 'green'
+            document.body.style.backgroundColor = localStorage.cor
+
+        }
+
+        function chocolate() {
+            localStorage.cor = 'chocolate'
+            document.body.style.backgroundColor = localStorage.cor
+
+        }
+
+        function amarelo() {
+            localStorage.cor = 'yellow'
+            document.body.style.backgroundColor = localStorage.cor
+
+        }
+    </script>
+
+</body>
+
+</html>
