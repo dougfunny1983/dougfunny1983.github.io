@@ -1,14 +1,14 @@
 body {
-    background-color: aquamarine;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+    background-color: whitesmoke;
     text-rendering: optimizeLegibility;
-    font-size: 2em;
+    font-size: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .titulo {
     position: relative;
-    width: 100%;
+    width: 96%;
     margin-top: 0px;
     padding: 60px 30px 40px;
     align-items: center;
@@ -29,11 +29,12 @@ body {
 }
 
 #menu ul {
-    padding: 10px;
-    margin: 5px;
-    background-color: rgb(132, 130, 136);
+    padding: 6px;
+    margin: 3px;
+    background-color: black;
     list-style: none;
     font-size: 20px;
+    max-width: 100%;
 }
 
 #menu ul li {
@@ -57,11 +58,6 @@ body {
     border-bottom: 10px solid #EA0000;
 }
 
-.imagemantiga {
-    width: 300px;
-    float: left;
-    margin-right: 2%;
-}
 
 .texto {
     margin-top: 50px;
