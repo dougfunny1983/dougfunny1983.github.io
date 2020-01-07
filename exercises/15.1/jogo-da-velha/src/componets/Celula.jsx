@@ -5,17 +5,22 @@ export class Celula extends Component {
     super(props)
   
     this.state = {
-       
+       array: [[0,0,0],[0,0,0],[0,0,0]],
+       jogador: 1,
+       gameOver: false,
     }
     this.receberCliques = this.receberCliques.bind(this)
   }
   
-   receberCliques(e) {
-    console.log(e.target);
+   receberCliques() {
+    this.setState({
+      jogador: 0
+    })
+    
   }
   render() {
     return (
-      <div className='celula' onClick={(e) => this.receberCliques(e)}></div>
+      <div className='celula' onClick={() => this.receberCliques()}></div>
     )
   }
 }
