@@ -1,5 +1,11 @@
 .App {
+  display: flex;
   text-align: center;
+  margin: 0 auto;
+}
+
+.status {
+  margin-bottom: 2em;
 }
 
 .celula {
@@ -12,4 +18,5 @@
   display: flex;
   width: 315px;
   flex-wrap: wrap;
+  
 }
