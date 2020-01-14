@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.status {
+  margin-bottom: 2em;
+}
+
+.celula {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.tabuleiro {
+  display: flex;
+  width: 315px;
+  flex-wrap: wrap;
+  
+}
