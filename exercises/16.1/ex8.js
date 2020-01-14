@@ -1,26 +1,24 @@
 const ADD_NOTE = 'ADD_NOTE';
 
 const notesReducer = (state = 'Initial State', action) => {
-  switch(action.type) {
-    
+  switch (action.type) {
     case ADD_NOTE:
-      return action.text
-    
+      return action.text;
+
     default:
       return state;
   }
 };
 
 const addNoteText = (note) => {
-      return {
+  return {
     type: ADD_NOTE,
-    text: note
+    text: note,
   };
-  
 };
 
 const store = Redux.createStore(notesReducer);
 
 console.log(store.getState());
 store.dispatch(addNoteText('Hello!'));
-console.log(store.getState()
+console.log(store.getState());
