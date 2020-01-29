@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import "./PaintGrid.css";
-import { PainterContext } from "../contexts/PainterContext";
+import React, { useState } from 'react';
+import './PaintGrid.css';
+import { PainterContext } from '../contexts/PainterContext';
 
 function PaintGrid(_) {
   const { colors, color } = React.useContext(PainterContext);
@@ -46,9 +46,9 @@ function PaintGrid(_) {
         key={c_i}
         className="painterBlock"
         onClick={() => updateGrid(r_i, c_i)}
-        onMouseMove={e => updateGridWithMouse(e, r_i, c_i)}
+        onMouseMove={(e) => updateGridWithMouse(e, r_i, c_i)}
         style={{
-          backgroundColor: grid[r_i][c_i].hex
+          backgroundColor: grid[r_i][c_i].hex,
         }}
       />
     );
@@ -56,7 +56,11 @@ function PaintGrid(_) {
 
   const drawTableRows = (row, r_i) => {
     return (
-      <tr key={r_i}>{row.map((col, c_i) => { return drawTableCell(r_i, c_i)})}</tr>
+      <tr key={r_i}>
+        {row.map((col, c_i) => {
+          return drawTableCell(r_i, c_i);
+        })}
+      </tr>
     );
   };
 
@@ -65,7 +69,9 @@ function PaintGrid(_) {
       <div className="column">
         <table>
           <tbody>
-          {grid.map((row, r_i) => { return drawTableRows(row, r_i)})}
+            {grid.map((row, r_i) => {
+              return drawTableRows(row, r_i);
+            })}
           </tbody>
         </table>
       </div>

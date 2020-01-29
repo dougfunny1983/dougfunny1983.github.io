@@ -13,4 +13,4 @@ export const colors = [
   { name: 'purple', hex: '#9370db' },
 ];
 
-export default const PainterContext = React.createContext();
+export const PainterContext = React.createContext();

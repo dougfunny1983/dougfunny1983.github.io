@@ -1,14 +1,15 @@
-import React, {useState} from 'react';
-import './App.css';
-import ColorPicker from './componets/ColorPicker';
-import PaintGrid from './componets/PaintGrid';
-import ColorPreview from './componets/ColorPreview';
+import React from 'react';
+import '../App.css';
+import ColorPicker from './ColorPicker';
+import PaintGrid from './PaintGrid';
+import ColorPreview from './ColorPreview';
 import { colors, PainterContext } from '../contexts/PainterContext';
 
-const App = () => {
-  const [color, setColor] = useState(color[0]);
+function App(_) {
+  const [color, setColor] = React.useState(colors[0]);
+
   return (
-    <div>
+    <div className="App container">
       <PainterContext.Provider value={{ colors, color, setColor }}>
         <ColorPicker />
         <ColorPreview />
@@ -17,6 +18,6 @@ const App = () => {
       </PainterContext.Provider>
     </div>
   );
-};
+}
 
 export default App;
