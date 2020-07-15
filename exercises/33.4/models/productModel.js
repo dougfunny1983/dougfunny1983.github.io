@@ -1,4 +1,4 @@
-const fs = require('fs');
+const readAndWrite = require('../service');
 
 class Product {
   constructor(name, brand) {
@@ -7,51 +7,48 @@ class Product {
     this.brand = brand;
   }
 
-  getAll() {
-    const rawData = fs.readFileSync('./products.json');
-    const products = JSON.parse(rawData);
-
+  static async getAll() {
+    const products = await readAndWrite('read', 'products.json');
     return products;
   }
 
-  getById(id) {
-    const rawData = fs.readFileSync('./products.json');
-    const product = JSON.parse(rawData)
-                        .find((product) => product.id === parseInt(id));
+  static async getById(id) {
+    console.log('entrei ******************')
+    const rawData = await readAndWrite('read', 'products.json');
+    console.log('************************************');
+    console.log(id)
+    console.log('************************************');
+    const product = rawData.find(
+      product => product.id === parseInt(id),
+    );
 
     return product;
   }
 
-  add() {
-    const rawData = fs.readFileSync('./products.json')
-    const products = JSON.parse(rawData);
+  async add() {
+    const products = await readAndWrite('read', 'products.json');
 
-    this.id = products[products.length - 1].id + 1
+    this.id = products[products.length - 1].id + 1;
     products.push(this);
 
-    fs.writeFile('./products.json', JSON.stringify(products), 'utf8', (err) => {
-      if (err) throw err;
-      console.log('write file ok');
-    });
+    await readAndWrite('write', 'products.json', products);
 
     return this;
   }
 
-  delete(id) {
-    const rawData = fs.readFileSync('./products.json');
-    const products = JSON.parse(rawData).filter(product => product.id !== parseInt(id));
+  static async delete(id) {
+    const rawData = await readAndWrite('read', 'products.json');
+    const products = rawData.filter(
+      product => product.id !== parseInt(id),
+    );
 
-    fs.writeFile('./products.json', JSON.stringify(products), 'utf8', (err) => {
-      if (err) throw err;
-      console.log('write file ok');
-    });
+    await readAndWrite('write', 'products.json', products);
 
     return products;
   }
 
-  addOrUpdate(id) {
-    const rawData = fs.readFileSync('./products.json');
-    const products = JSON.parse(rawData);
+  async addOrUpdate(id) {
+    const products = await readAndWrite('read', 'products.json');
 
     const product = products.find(product => product.id === parseInt(id));
 
@@ -63,10 +60,7 @@ class Product {
       products.push(this);
     }
 
-    fs.writeFile('./products.json', JSON.stringify(products), 'utf8', (err) => {
-      if (err) throw err;
-      console.log('write file ok');
-    });
+    await readAndWrite('write', 'products.json', products);
 
     return products;
   }

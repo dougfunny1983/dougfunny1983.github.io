@@ -1,22 +1,16 @@
-const ProductModel = require("../models");
+const ProductModel = require('../models/productModel');
 
-const getAllProducts = (req, res) => {
-  const products = new ProductModel().getAll();
-
-  res.status(200)
-  res.json(products)
+const getAllProducts = async (_req, res) => {
+  const products = await ProductModel.getAll();
+  return res.status(200).json(products)
 }
 
-const getProductById = (req, res) => {
-  const product = new ProductModel().getById(req.params.id);
-
-  if (product === null) {
-    res.status(404)
-    return res.send({ message: 'Produto não encontrado' });
-  }
-
-  res.status(200)
-  res.json(product);
+const getProductById = async (req, res) => {
+  console.log('--------------------*******----------')
+  const product = await ProductModel.getById(req.params.id);
+  if (product === null)     
+    return res.status(404).send({ message: 'Produto não encontrado' });
+  return res.status(200).json(product);
 }
 
 const createProduct = (req, res) => {

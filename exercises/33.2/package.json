@@ -1,0 +1,22 @@
+{
+  "name": "33.2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node api/index.js",
+    "test": "jest --watchAll --coverage"
+  },
+  "keywords": [],
+  "author": "dougfunny <douglaseduardo220483@gmail.com>",
+  "license": "“MIT”",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^26.1.0",
+    "axiosist": "^0.9.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "supertest": "^4.0.2"
+  }
+}
